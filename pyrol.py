@@ -5,14 +5,20 @@
 
 from clases import PJ
 from func import eleccionRaza
+from func import pausa
 
+atrib = []
 
-razas = ("Enano", "Elfo", "Mediano", "Humano", "Dracónico", "Gnomo", "Semielfo", "Semiorco", "Tiflin")
-clases = ("Bárbaro", "Bardo", "Brujo", "Clérigo", "Druida", "Explorador", "Guerrero", "Hechicero", "Mago", "Monje", "Paladín", "Pícaro")
+### CREACIÓN DE PERSONAJE ###
+#############################
+nombrePj = str(input('Introduce nombre de nuevo personaje: '))
+pausa()
+razaPj = eleccionRaza()
+pausa()
+# clasePj = eleccion(clases, 'Escoge tu clase de la lista:')
+pausa()
+print()
 
-nombrePj = str(input("Introduce nombre de nuevo personaje: "))
-razaPj = eleccionRaza(razas)
-
-
-
-Conan = PJ(nombrePj, razaPj)
+print('Generando valores aleatorios para los atributos:')
+pausa()
+print(atrib)
