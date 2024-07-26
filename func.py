@@ -31,19 +31,26 @@ def calcCaracteristica(): # Función que realiza las tiradas de datos iniciales 
 
     return sum(tiradasD6) # Devuelvo la suma de los 3 valores contenidos en la lista tiradasD6
 
+def eleccionClase():
+    print('Indica la clase deseada:')
+    print('vvv')
+    print(listasYtablas.tablaClases) # Muestro tabla de clases en pantalla.
+    print(' ')
+
+
 def eleccionRaza(): # Seleccionamos una lista de elementos y un mensaje para informar al usuario de que escoja una opción.
     print('Indica el nombre de la raza deseada (Algunas razas tienen subrazas):')
     print('vvv')
 
-    print(listasYtablas.tablaRazas) # Muestro tabla en pantalla.
+    print(listasYtablas.tablaRazas) # Muestro tabla de razas en pantalla.
     print(' ')
     # Pedimos al usuario que escoja hasta que seleccione un número de elección valido:
     while True: # Repite indefinidamente, hasta que se escoja una opción correcta.
         try: # Con try controlamos los posibles errores, ValueError en este caso, así podemos hacer algo si falla en lugar de dejar que el programa se detenga.
             numRaza = (int(input('Ingrese el número de su elección: '))) # Guarda el número elección del usuario en la variable 'elecPj'
-            if 1 <= numRaza <= len(listasYtablas.razas): # Verificamos que 1 sea menor o igual al número escogido y este a su vez sea menor o igual al número total de razas.
+            if 1 <= numRaza <= len(listasYtablas.razasPj): # Verificamos que 1 sea menor o igual al número escogido y este a su vez sea menor o igual al número total de razas.
                 contador = 1
-                for key in listasYtablas.razas:
+                for key in listasYtablas.razasPj:
                     if contador == numRaza:
                         razaSelec = key
                         print(f'Raza seleccionada: {razaSelec}.')
