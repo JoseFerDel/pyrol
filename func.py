@@ -18,6 +18,21 @@ def pausa():
     print()
     print()
 
+def limpia():
+    """
+    Limpia la pantalla de la consola independientemente del sistema operativo.
+    Funciona en bash, PowerShell, cmd y terminales de macOS.
+    """
+    import os
+    import platform
+
+    sistemaOperativo = platform.system()
+
+    if sistemaOperativo == "Windows":
+        os.system("cls") # Solo para Windows.
+    else:
+        os.system("clear") # Cualquier otro sistema (Unix, macOS)
+
 def calcCaracteristica(): # Función que realiza las tiradas de datos iniciales para los valores de las caracteristicas.
     tiradasD6 = []
 

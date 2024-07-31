@@ -25,3 +25,9 @@ class PJ:
         print(f'INTELIGENCIA: {self.int}')
         print(f'SABIDURÍA: {self.sab}')
         print(f'CARISMA: {self.car}')
+
+    def __str__(self):
+        return 'Objeto de clase PJ (Personaje Jugador)'
+    
+    def __del__(self):
+        print(f'Personaje {self.nombre} destrído')
